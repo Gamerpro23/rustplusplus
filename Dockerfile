@@ -11,4 +11,4 @@ COPY . /app
 
 
 
-CMD ["npm", "start"]
+CMD ["sh", "-c", "mkdir -p /data/credentials /data/instances /data/logs /data/maps && rm -rf /app/credentials /app/instances /app/logs /app/maps && ln -s /data/credentials /app/credentials && ln -s /data/instances /app/instances && ln -s /data/logs /app/logs && ln -s /data/maps /app/maps && npm start"]
